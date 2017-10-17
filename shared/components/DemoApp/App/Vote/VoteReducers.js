@@ -1,15 +1,14 @@
 import {
     RECEIVED_SUBMIT_LOGIN,
     REQUEST_SUBMIT_LOGIN
-} from './LoginActions'
-import { loginDataState } from '../../initialState';
+} from './VoteActions'
+import { voteDataState } from '../../initialState';
 
-const loginReducer = (state = loginDataState, action) => {
+const voteReducer = (state = voteDataState, action) => {
     switch (action.type) {
         case RECEIVED_SUBMIT_LOGIN: {
             return Object.assign({}, state, {
                 isLoading: false,
-                isSuccess: true,
                 errors: []
             })
         }
@@ -24,4 +23,4 @@ const loginReducer = (state = loginDataState, action) => {
     }
 };
 
-export default loginReducer
+export default voteReducer

@@ -1,14 +1,21 @@
 const loginDataState = {
-  isLoading: false,
-  username: '',
-  password: '',
-  errors: [],
-  isSuccess: false,
+    isLoading: false,
+    errors: [],
+    isSuccess: false,
+    token: null,
+    name: null
 };
+
+const voteDataState = {
+    isLoading: false,
+    errors: [],
+    isSuccess: false
+}
 
 const initialState = {
-  loginData: loginDataState,
+    loginData: loginDataState,
+    voteData: voteDataState
 };
 
-export { loginDataState };
+export { loginDataState, voteDataState };
 export default initialState;
