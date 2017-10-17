@@ -2,31 +2,35 @@ import React, { Component } from 'react';
 
 class LoginForm extends Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       username: '',
       password: '',
-    };
+    }
 
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleInputChange = this.handleInputChange.bind(this)
   }
 
   handleInputChange(event) {
-    const { name, value } = event.target;
+    const { name, value } = event.target
     this.setState({
       [name]: value,
-    });
+    })
   }
 
   handleSubmit(event) {
-    event.preventDefault();
-    console.log(this.state);
+    event.preventDefault()
+    this.props.submitLogin(this.state)
   }
 
   render() {
-    const { username, password } = this.state;
+    const { username, password } = this.state
+    const { isLoading, } = this.props.loginData
+
+    let btnClass = isLoading ? 'btn btn-default ' : 'btn btn-primary '
+    btnClass += 'btn-block raised'
 
     return (
       <div className="row">
@@ -71,8 +75,8 @@ class LoginForm extends Component {
               </div>
               <div className="form-group col-md-12">
                 <div className="form-group col-md-12">
-                  <button type="submit" className="btn btn-primary raised btn-block">
-                    Masuk
+                  <button type="submit" className={btnClass}>
+                    {isLoading ? "Loading..." : "Masuk"}
                   </button>
                   <br />
                 </div>
@@ -81,8 +85,6 @@ class LoginForm extends Component {
           </form>
           <div className="row">
             <div className="col-md-12">
-              <br />
-              <br />
               <blockquote className="blockquote-reverse">
                 <p>
                   <b>
