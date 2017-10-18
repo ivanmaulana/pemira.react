@@ -18,7 +18,9 @@
     "precommit": "lint-staged",
     "preinstall": "node internal/scripts/preinstall",
     "prepush": "jest",
-    "start": "cross-env NODE_ENV=production node build/server",
+    "build_and_start": "npm run build && npm run start",
+    "start": "cross-env NODE_ENV=production pm2 start build/server -i 2",
+    "restart": "npm run build && pm2 restart server",
     "test": "jest",
     "test:coverage": "jest --coverage"
   },

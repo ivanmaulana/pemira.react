@@ -3,7 +3,8 @@ const loginDataState = {
     errors: [],
     isSuccess: false,
     token: null,
-    name: null
+    nama: null,
+    nim: null
 };
 
 const voteDataState = {

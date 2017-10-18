@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.png';
+import logo from './logo.jpg';
 
 function Logo() {
   return <img src={logo} alt="Logo" style={{ width: '100px' }} />;
