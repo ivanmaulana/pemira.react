@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { submitLogin } from './LoginActions';
-import Header from './Header';
+import Header from '../Header';
 import Form from './Form';
 
 class Login extends Component {
@@ -14,7 +14,7 @@ class Login extends Component {
             loginData,
             submitLogin
         } = this.props
-        
+
         return (
             <div>
                 <Header />

@@ -37,11 +37,10 @@ class LoginForm extends Component {
                 <div className="col-md-6 col-md-offset-3 col-sm-12">
                     <form onSubmit={this.handleSubmit}>
                         <fieldset>
-                            <div className="col-xs-12">
-                                {errors.map((error, index) =>
-                                    <div key={index} className="alert alert-danger" role="alert"><b>{error}</b></div>
-                                )}
-                            </div>
+
+                            {errors.map((error, index) =>
+                                <div key={index} className="alert alert-danger" role="alert"><b>{error}</b></div>
+                            )}
 
                             {isLoading &&
                                 <div className="alert alert-info" role="alert"><b>Getting Data...</b></div>
@@ -51,6 +50,7 @@ class LoginForm extends Component {
 
                             <div className="form-group col-md-12">
                                 <label htmlFor="email">Username : </label>
+
                                 <div className="input-group">
                                     <span className="input-group-addon">
                                         <i className="icon ion-person" />
@@ -66,9 +66,12 @@ class LoginForm extends Component {
                                         onChange={this.handleInputChange}
                                     />
                                 </div>
+
                             </div>
+
                             <div className="form-group col-md-12">
                                 <label htmlFor="email">Password : </label>
+
                                 <div className="input-group">
                                     <span className="input-group-addon">
                                         <i className="icon ion-locked" />
@@ -83,7 +86,9 @@ class LoginForm extends Component {
                                         onChange={this.handleInputChange}
                                     />
                                 </div>
+
                             </div>
+
                             <div className="form-group col-md-12">
                                 <div className="form-group col-md-12">
                                     <button type="submit" className={btnClass}>
@@ -92,22 +97,25 @@ class LoginForm extends Component {
                                     <br />
                                 </div>
                             </div>
+
                         </fieldset>
                     </form>
+
                     <div className="row">
                         <div className="col-md-12">
                             <blockquote className="blockquote-reverse">
-                                <p>
-                                    <b>
-                                        <i>PEMILIHAN KETUA DAN WAKIL KETUA HIMALKOM 2017 / 2018</i>
-                                    </b>
-                                </p>
                                 <small>
                                     <cite title="Source Title">
                                         <a>@2017, HIMALKOM IPB </a>||
                                         <a href="https://www.linkedin.com/in/ivanmaulana"> Ivan Maulana</a> |{' '}
                                         <a href="https://www.linkedin.com/in/irmusyafa">Irfan Rafii Musyafa</a>
                                     </cite>
+
+                                    <div style={{paddingTop: "30px"}}>
+                                        Source code will be available tomorrow:
+                                    </div>
+
+                                    <a target="_blank" href="https://github.com/ivanmaulana/pemira.react">Github.com/ivanmaulana/pemira.react</a>
                                 </small>
                             </blockquote>
                         </div>

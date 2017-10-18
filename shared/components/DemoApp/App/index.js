@@ -22,12 +22,14 @@ class App extends Component {
                 <title>Pemira Himalkom</title>
               </Helmet>
 
-              {loginData.isSuccess && <Vote />}
-              {!loginData.isSuccess && <Login />}
+              <Vote></Vote>
             </div>
         )
     }
 }
+
+// {loginData.isSuccess && <Vote />}
+// {!loginData.isSuccess && <Login />}
 
 const mapStateToProps = ({ loginData, voteData }) => {
     return {

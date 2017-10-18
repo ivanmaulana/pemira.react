@@ -15,12 +15,10 @@ function requestSubmitLogin() {
     }
 }
 
-
 export function submitLogin(params) {
     const MAGIC = 'IniBuatKitaLoh'
     const API = 'http://test.agri.web.id/api/testHimalkom'
     params.magic = MAGIC
-    params.bilik = null
 
     return dispatch => {
         dispatch(requestSubmitLogin())

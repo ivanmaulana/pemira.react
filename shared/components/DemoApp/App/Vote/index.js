@@ -1,4 +1,7 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
+import { connect } from 'react-redux';
+import Header from '../Header';
+import Candidate from './Candidate';
 
 class Vote extends Component {
     constructor(props) {
@@ -8,10 +11,25 @@ class Vote extends Component {
     render() {
         return(
             <div>
-                Vote
+                <Header />
+                <Candidate />
             </div>
         )
     }
 }
 
-export default Vote
+
+const mapStateToProps = ({ loginData, voteData }) => {
+    return {
+        loginData,
+        voteData
+    };
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Vote);
