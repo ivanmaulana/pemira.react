@@ -10,9 +10,9 @@ const fetchGet = (urlPath) => {
         })
 }
 
-const fetchPost = (urlPath, params) => {
+const fetchPost = (urlPath, params, token = null) => {
     const requestBody = JSON.stringify(params)
-    const requestHeaders = {"Content-Type": "application/json"}
+    const requestHeaders = {"Content-Type": "application/json", "authorization": token}
 
     return fetch(urlPath, {
         credentials: "include",

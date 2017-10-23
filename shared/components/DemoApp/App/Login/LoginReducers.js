@@ -1,7 +1,10 @@
 import {
     RECEIVED_SUBMIT_LOGIN,
-    REQUEST_SUBMIT_LOGIN
+    REQUEST_SUBMIT_LOGIN,
 } from './LoginActions'
+import {
+    RECEIVED_VOTE
+} from '../Vote/VoteActions'
 import { loginDataState } from '../../initialState';
 
 const loginReducer = (state = loginDataState, action) => {
@@ -34,6 +37,16 @@ const loginReducer = (state = loginDataState, action) => {
             return Object.assign({}, state, {
                 isLoading: true,
                 errors: []
+            })
+        }
+        case RECEIVED_VOTE: {
+            return Object.assign({}, state, {
+                isLoading: false,
+                errors: [],
+                isSuccess: false,
+                token: null,
+                nama: null,
+                nim: null
             })
         }
         default:

@@ -22,7 +22,13 @@ class App extends Component {
                 <title>Pemira Himalkom</title>
               </Helmet>
 
-              <Vote></Vote>
+              {!loginData.token &&
+                  <Login />
+              }
+
+              {loginData.token &&
+                  <Vote />
+              }
             </div>
         )
     }

@@ -83,6 +83,7 @@
     "redux": "^3.3.1",
     "redux-thunk": "^1.0.3",
     "serialize-javascript": "1.4.0",
+    "sweetalert": "^2.0.8",
     "sweetalert-react": "^0.4.10",
     "uuid": "3.1.0"
   },

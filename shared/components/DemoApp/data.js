@@ -1,15 +1,18 @@
 const HIMALKOM_DATA = [
     {
         id: 1,
-        name: "A",
+        ketua: "ZULFAHMI IBNU HABIBI",
+        wakil: "ALVIN AFANDI",
     },
     {
         id: 2,
-        name: "B",
+        ketua: "VITO RIZKI IMANDA",
+        wakil: "NOEW WIDYA H",
     },
     {
         id: 3,
-        name: "C",
+        ketua: "ARGA PUTRA PANATAGAMA",
+        wakil: "NUH SATRIA PUTRA",
     }
 ]
 
